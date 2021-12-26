@@ -9,9 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    class Session {
+        static let instance = Session()
+
+        private init() {}
+
+        var fio = ""
+        var id = 0
+        var pass = 0
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let session = Session.instance
+        session.fio = "Петров Иван"
+        session.pass = 1234
     }
 
 
